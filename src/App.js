@@ -7,15 +7,15 @@ import UseQueryExample from "./components/UseQueryExample";
 const menuItems = [
   {
     title: "Redux",
-    component: <ReduxExample />
+    component: <ReduxExample />,
   },
   {
     title: "UseQuery",
-    component: <UseQueryExample />
+    component: <UseQueryExample />,
   },
   {
     title: "UseMutation",
-    component: <UseMutationExample />
+    component: <UseMutationExample />,
   },
 ];
 
@@ -32,7 +32,10 @@ function App() {
           </div>
         ))}
       </div>
-      <div className="content">{menuItems[selectedKey].component}</div>
+      <div className="content">
+        {menuItems[selectedKey].title}
+        {menuItems[selectedKey].component}
+      </div>
     </main>
   );
 }

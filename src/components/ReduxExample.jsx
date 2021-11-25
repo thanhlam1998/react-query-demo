@@ -24,7 +24,7 @@ const ReduxExample = () => {
     <div>
       {users?.map((item) => (
         <div key={item.id}>
-          {item.name} - {item.website}
+          {item.name} - {item.email}
         </div>
       ))}
     </div>

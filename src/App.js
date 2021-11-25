@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import PrefetchExample from "./components/PrefetchExample";
 import ReduxExample from "./components/ReduxExample";
 import UseMutationExample from "./components/UseMutationExample";
 import UseQueryExample from "./components/UseQueryExample";
@@ -17,10 +16,6 @@ const menuItems = [
   {
     title: "UseMutation",
     component: <UseMutationExample />
-  },
-  {
-    title: "Prefetch",
-    component: <PrefetchExample />
   },
 ];
 

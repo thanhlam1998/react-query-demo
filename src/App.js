@@ -32,7 +32,10 @@ function App() {
           </div>
         ))}
       </div>
-      <div className="content">{menuItems[selectedKey].component}</div>
+      <div className="content">
+        {menuItems[selectedKey].title}
+        {menuItems[selectedKey].component}
+      </div>
     </main>
   );
 }

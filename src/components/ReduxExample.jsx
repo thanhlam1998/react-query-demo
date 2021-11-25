@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../store/actions/user";
 
 const ReduxExample = () => {
-	const [users, setUsers] = useState([]);
   const dispatch = useDispatch();
+	const [users, setUsers] = useState([]);
   const { usersList, isLoading } = useSelector((state) => state.users);
 
   useEffect(() => {
     dispatch(getUsers());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
 		setUsers(usersList);
@@ -24,7 +24,7 @@ const ReduxExample = () => {
     <div>
       {users?.map((item) => (
         <div key={item.id}>
-          {item.name} - {item.website}
+          {item.name} - {item.email}
         </div>
       ))}
     </div>
